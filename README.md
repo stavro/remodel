@@ -115,8 +115,8 @@ defmodule UserSerializer do
   attribute :id
 end
 
-[%{id: 1, id: 2}] |> UserSerializer.to_map #=>  %{users: [%{id: 1}, %{id: 2}]}
-[%{id: 1, id: 2}] |> UserSerializer.to_map(array_root: :superusers) #=>  %{superusers: [%{id: 1}, %{id: 2}]}
+[%{id: 1}, %{id: 2}] |> UserSerializer.to_map #=>  %{users: [%{id: 1}, %{id: 2}]}
+[%{id: 1}, %{id: 2}] |> UserSerializer.to_map(array_root: :superusers) #=>  %{superusers: [%{id: 1}, %{id: 2}]}
 ```
 
 Example usage of instance root nodes:
@@ -129,8 +129,8 @@ defmodule UserSerializer do
   attribute :id
 end
 
-[%{id: 1, id: 2}] |> UserSerializer.to_map #=>  %{[%{user: %{id: 1}}, %{user: %{id: 2}}]}
-[%{id: 1, id: 2}] |> UserSerializer.to_map(instance_root: :user) #=>  %{[%{user: %{id: 1}}, %{user: %{id: 2}}]}
+[%{id: 1}, %{id: 2}] |> UserSerializer.to_map #=>  %{[%{user: %{id: 1}}, %{user: %{id: 2}}]}
+[%{id: 1}, %{id: 2}] |> UserSerializer.to_map(instance_root: :user) #=>  %{[%{user: %{id: 1}}, %{user: %{id: 2}}]}
 ```
 
 ### List Generation ###
