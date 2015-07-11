@@ -1,5 +1,7 @@
 # Remodel #
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/8c5cf51e-a3e8-47a6-8b91-632114de4fba/480819/badge.svg)](https://semaphoreci.com/stavro/remodel)
+
 Remodel is an Elixir _presenter_ package used to transform data structures.  This is especially useful when a desired representation doesn't match the schema defined within the database.
 
 In particular, Remodel enables:
