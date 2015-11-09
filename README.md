@@ -186,7 +186,21 @@ Repo.one(from u in User, where: u.id == 2, select: u, limit: 1) |> UserSerialize
 ```
 
 All attribute and conditional functions must accept either one argument (the record), or two arguments (the record, and any given scope)
+### Meta ###
 
+Often when you have pagination with your data you use a meta field for showing additional information (current_page, total_pages, etc).
+`meta` will only be included if you have a Serializer that supports `root`
+
+```elixir
+defmodule UserSerializer do
+  use Remodel
+  @array_root :users
+
+  attribute :id
+end
+
+[%{id: 1}, %{id: 2}] |> UserSerializer.to_map(meta: %{ page: 1 } #=>  %{users: [%{id: 1}, %{id: 2}], "meta" => %{ page: 1}}
+```
 ## Roadmap ##
 
 Remodel is a brand new project, and I am hopeful that there is a place in the Elixir ecosystem for such a tool.  In no particular order of importance, some features I would like to add are:
