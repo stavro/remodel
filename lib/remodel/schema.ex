@@ -39,18 +39,22 @@ defmodule Remodel.Schema do
       def to_list(resource, options \\ []) do
         Remodel.Formatter.ListFormatter.format resource, __MODULE__, (options |> list_to_map |> apply_defaults)
       end
-      
-      defp list_to_map(options) when is_list(options),
-        do: Enum.into(options, %{})
-      defp list_to_map(options),
-        do: options
+
+      defp list_to_map(options) when is_list(options), do: Enum.into(options, %{})
+      defp list_to_map(options), do: options
 
       defp apply_defaults(options) do
-        if !Map.has_key?(options, :instance_root),
-          do: options = Dict.put(options, :instance_root, @instance_root)
+        options = if !Map.has_key?(options, :instance_root) do
+          Dict.put(options, :instance_root, @instance_root)
+        else
+          options
+        end
 
-        if !Map.has_key?(options, :array_root),
-          do: options = Dict.put(options, :array_root, @array_root)
+        options = if !Map.has_key?(options, :array_root) do
+          Dict.put(options, :array_root, @array_root)
+        else
+          options
+        end
 
         options
       end

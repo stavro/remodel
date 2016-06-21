@@ -1,6 +1,4 @@
 defmodule Remodel.Formatter.MapFormatter do
-  alias Remodel.Attribute
-
   def format(resource, serializer, options) do
     format_resource(resource, serializer, options)
     |> put_meta(options[:meta])

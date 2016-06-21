@@ -9,6 +9,7 @@ defmodule Remodel.Attribute do
     end
   end
 
+  defmacro define_conditional(nil), do: nil
   defmacro define_conditional(cond_func) do
     quote bind_quoted: [cond_func: cond_func] do
       def unquote(cond_func)(record, scope), do: apply(__MODULE__, unquote(cond_func), [record])
@@ -16,7 +17,6 @@ defmodule Remodel.Attribute do
       defoverridable [{cond_func, 1}, {cond_func, 2}]
     end
   end
-  defmacro define_conditional(cond_func), do: nil
 
   defmacro define_attr_accessor(attr) do
     quote bind_quoted: [attr: attr] do
