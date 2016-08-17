@@ -29,7 +29,7 @@ This is especially useful when a desired representation doesn't match the schema
   end
 
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp package do
