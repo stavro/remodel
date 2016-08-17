@@ -30,5 +30,5 @@ defmodule Remodel.Formatter.MapFormatter do
   defp wrap(value, key) when is_nil(key),
     do: value
   defp wrap(value, key),
-    do: Dict.put(%{}, key, value)
+    do: Map.put(%{}, key, value)
 end

@@ -45,13 +45,13 @@ defmodule Remodel.Schema do
 
       defp apply_defaults(options) do
         options = if !Map.has_key?(options, :instance_root) do
-          Dict.put(options, :instance_root, @instance_root)
+          Map.put(options, :instance_root, @instance_root)
         else
           options
         end
 
         options = if !Map.has_key?(options, :array_root) do
-          Dict.put(options, :array_root, @array_root)
+          Map.put(options, :array_root, @array_root)
         else
           options
         end
