@@ -10,7 +10,7 @@ In particular, Remodel enables:
  * Arbitrary attributes based on combining data in an object
  * Inclusion of attributes only if a certain conditions have been met
  * Addition of root nodes on arrays or instances
- * Easy conversion to a list representation (eg, for CSVs) 
+ * Easy conversion to a list representation (eg, for CSVs)
 
 ## Installation ##
 
@@ -18,7 +18,7 @@ Install Remodel as a hex dependency in your `.mix` file:
 
 ```elixir
   defp deps do
-    [{:remodel, "~> 0.0.1"}]
+    [{:remodel, "~> 0.0.3"}]
   end
 ```
 
@@ -65,8 +65,8 @@ Which would output the following JSON when visiting the appropriate action:
 ```js
 [
   {
-    "id" : 1, 
-    "title": "Introducing Remodel", 
+    "id" : 1,
+    "title": "Introducing Remodel",
     "author_name" : "Sean Stavropoulos"
   },
   {
