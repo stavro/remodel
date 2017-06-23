@@ -18,7 +18,7 @@ Install Remodel as a hex dependency in your `.mix` file:
 
 ```elixir
   defp deps do
-    [{:remodel, "~> 0.0.3"}]
+    [{:remodel, "~> 0.0.4"}]
   end
 ```
 

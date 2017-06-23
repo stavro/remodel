@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.0.4 (2017-06-22)
+  * Fix Elixir warnings.
+
 ## v0.0.3 (2016-08-17)
   * Remove `Dict` usage.
 
