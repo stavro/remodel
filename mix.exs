@@ -34,9 +34,9 @@ This is especially useful when a desired representation doesn't match the schema
 
   defp package do
     [
-     licenses: ["Apache 2.0"],
-     links: %{"GitHub": "https://github.com/stavro/remodel"},
-     contributors: ["Sean Stavropoulos"]
-     ]
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub": "https://github.com/stavro/remodel"},
+      maintainers: ["Sean Stavropoulos"]
+    ]
   end
 end
